@@ -18,6 +18,7 @@ def get_customers(connection):
 
 
 def insert_customer(connection, customer):
+    global cursor
     try:
         cursor = connection.cursor()
         query = "INSERT INTO customers (CustomerID, Name, Contact, Address) VALUES (%s, %s, %s, %s)"
@@ -38,6 +39,7 @@ def insert_customer(connection, customer):
 
 
 def delete_customer(connection, customer):
+    global cursor
     try:
         cursor = connection.cursor()
         query = "DELETE FROM customers WHERE CustomerID = %s"
