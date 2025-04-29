@@ -6,8 +6,6 @@ def get_customers(connection):
     query = "SELECT * FROM groc.customers"
 
     cursor.execute(query)
-
-
     response = []
     print(cursor)
     for (CustomerID,Name,Contact,Address) in cursor:
