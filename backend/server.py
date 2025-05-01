@@ -3,7 +3,7 @@ from socket import create_connection
 from flask import Flask, request, jsonify, json
 import product_dao
 from backend import sales_dao, customers_dao
-from backend.customers_dao import insert_customer
+from customers_dao import insert_customer
 from sql_connection import get_sql_connection
 from flask_cors import CORS  # To allow cross-origin requests
 
